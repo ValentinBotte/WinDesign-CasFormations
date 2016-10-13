@@ -22,7 +22,7 @@ namespace MLO1
 		 	private
 		  int numero; 
 		 	private
-		  Date dateDebut; 
+		  DateTime dateDebut; 
 		 	private
 		  int nbMax; 
 		
@@ -36,19 +36,29 @@ namespace MLO1
 
 				
 		//Operations
-		
+	
+
+        public Session(int numero, DateTime dateDebut, int nbMax, Participant[] lesParticipants)
+        {
+            this.numero = numero;
+            this.dateDebut = dateDebut;
+            this.nbMax = nbMax;
+            this.lesParticipants = lesParticipants;
+        }
+
+        ///<return>int</return>
+
+        public  int getNumero()
+        {
+            return this.numero;
+        }
 		
 			///<return>void</return>
 		
-			public  void init( int unNumero ,  Date uneDate ,  int unNb );
-		
-			///<return>int</return>
-		
-			public  int getNumero();
-		
-			///<return>void</return>
-		
-			public  void ajouteParticipant( Participant unParticipant );
+			public  void ajouteParticipant( Participant unParticipant)
+        {
+           
+        }
 		
 			///<return>Booléen</return>
 		
